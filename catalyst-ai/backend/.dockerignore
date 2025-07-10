@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.env
+.idea/
+.vscode/
+tests/
+*.log
+*.sqlite3
+uploads/         # optional: unless you want to seed with sample files
+.DS_Store
+.git/
