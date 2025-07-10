@@ -3,7 +3,7 @@ from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, Foreign
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
-from . import Base
+from app.config.database import Base
 
 class DocumentType(str, enum.Enum):
     PDF = "pdf"

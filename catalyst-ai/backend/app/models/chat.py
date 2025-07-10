@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, Foreign
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
-from . import Base
+from app.config.database import Base
 
 class Chat(Base):
     __tablename__ = "chats"
@@ -16,7 +16,7 @@ class Chat(Base):
     is_archived = Column(Boolean, default=False, nullable=False)
     
     # Metadata
-    metadata = Column(JSON, nullable=True)  # Store additional chat settings
+    chat_metadata = Column(JSON, nullable=True)  # Store additional chat settings
     
     # Timestamps
     created_at = Column(DateTime(timezone=True), server_default=func.now())
